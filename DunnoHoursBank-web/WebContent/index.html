@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Dunno Hours Bank</title>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js">/**/</script>
+	<script type="text/javascript">
+	registerTimeEntry = function() {
+		var url = 'api/employee/timeEntry';
+		$.post( url, function( data ) {
+			  $( ".result" ).html( 'Success' );
+		});
+	}
+	</script>
+</head>
+<body>
+	<h1>Registar ponto</h1>
+	<div class="result">&nbsp;</div>
+	<input type="button" value="Enviar" onclick="registerTimeEntry()" />
+</body>
+</html>
